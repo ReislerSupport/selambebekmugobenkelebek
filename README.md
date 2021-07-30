@@ -1,4 +1,4 @@
-<h1 align="centre">©️ KINGBOT Music Bot 🎶</h1>
+<h1 align="centre">©️ Reisler Music Bot 🎶</h1>
 
 
 <h2 align="centre">⚙️ Set Up ⚙️</h3>
@@ -16,9 +16,9 @@ Get STRING_NAME from here only otherwise not work:
 
 ### CONTACT SUPPORT
 
-https://t.me/KINGBOTOFFICIAL
+https://t.me/ReislerKanal
 
-https://t.me/KINGBOTOFFICIALCHAT
+https://t.me/ReislerSupport
 
 ### Mandatory Vars.
 
