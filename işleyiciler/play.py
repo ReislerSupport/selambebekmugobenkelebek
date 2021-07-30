@@ -98,7 +98,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("**⭐ KINGBOT ⭐**: Processing song...")
+    lel = await message.reply("**🇹🇷 REİSLER 🇹🇷**: Processing song...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -107,7 +107,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="Support⚡️",
-                        url="https://t.me/KINGBOTOFFICIAL")
+                        url="https://t.me/ReislerSupport")
                    
                 ]
             ]
@@ -119,7 +119,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**⭐ KINGBOT ⭐**❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!🙄"
+                f"**🇹🇷 REİSLER MÜZİK BOT 🇹🇷**❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!🙄"
             )
 
         file_name = get_file_name(audio)
@@ -133,7 +133,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text="Support⚡️",
-                            url="https://t.me/KINGBOTOFFICIAL")
+                            url="https://t.me/ReislerSupport")
 
                     ]
                 ]
@@ -162,7 +162,7 @@ async def play(_, message: Message):
                         [
                             InlineKeyboardButton(
                                 text="Support⚡️",
-                                url="https://t.me/KINGBOTOFFICIAL")
+                                url="https://t.me/ReislerSupport")
 
 
                         ]
@@ -178,7 +178,7 @@ async def play(_, message: Message):
                         [
                             InlineKeyboardButton(
                                 text="Support⚡️",
-                                url="https://t.me/KINGBOTOFFICIAL")
+                                url="https://t.me/ReislerSupport")
 
 
                         ]
@@ -188,7 +188,7 @@ async def play(_, message: Message):
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
-        await lel.edit("**⭐ KINGBOT ⭐**: 🔎 Finding the song...")
+        await lel.edit("**⭐ @ReislerSupport ⭐**: 🔎 Finding the song...")
         sender_id = message.from_user.id
         user_id = message.from_user.id
         sender_name = message.from_user.first_name
@@ -199,7 +199,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += ' ' + str(i)
         print(query)
-        await lel.edit("**⭐ KINGBOT ⭐**: Processing... ")
+        await lel.edit("**⭐ @SancakAilesi ⭐**: Processing... ")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -216,7 +216,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             lel.edit(
-                "**⭐ KINGBOT ⭐**: ❌ Song not found.\n\nTry another song or maybe spell it properly."
+                "**⭐ REİSLER ONLİNE ⭐**: ❌ Song not found.\n\nTry another song or maybe spell it properly."
             )
             print(str(e))
             return
@@ -226,7 +226,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text="Support⚡️",
-                            url="https://t.me/KINGBOTOFFCIAL")
+                            url="https://t.me/ReislerSupport")
 
                     ]
                 ]
@@ -239,7 +239,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"**⭐ KINGBOT ⭐**: #️⃣ Queued at position {position}!",
+        caption=f"**⭐ @ReislerDcBot ⭐**: #️⃣ Queued at position {position}!",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -248,7 +248,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**⭐ KINGBOT ⭐**: ▶️ Playing... Song requested by {} via [YouTube](https://t.me/KINGBOTOFFICIAL)".format(
+        caption="**⭐ REİSLER ONLİNE ⭐**: ▶️ Playing... Song requested by {} via [YouTube](https://t.me/KINGBOTOFFICIAL)".format(
         message.from_user.mention()
         ),
     )
