@@ -10,7 +10,7 @@ Fork and Deploy if u have github account. Do not forget to give star 🌟
 
 Get STRING_NAME from here only otherwise not work:
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@Kartikpro/KINGBOT-MUSIC-STRING#main.py)
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@AdizKaptan/KINGBOT-MUSIC-STRING)
 
 
 
